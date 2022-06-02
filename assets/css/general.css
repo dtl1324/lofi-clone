@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Dancing Script', cursive;
+}
+:root{
+    --white-color: #fff;
+    --gray-color: #8C8684;
+    --primary-color: #F3A952;
+    --lightprimary-color: #f7bb78;
+    --black-color: #000;
+    --input-color: #14141D;
+    --aqua-color: aqua;
+    --icon-negative:#2C2C2E;
+    --lightgray-color: #2B2322;
+    --btn-negative: #625956;
+    --pink-color: #C5395C;
+    --blue-color: #1D93DF;
+}
+.hide{
+    display: none !important;
+}
+
+.color-active{
+    color: var(--primary-color) !important;
+    opacity: 1 !important;
+}
+
+.btn{
+    color: var(--white-color);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 25px;
+    min-width: 90px;
+    min-height: 36px;
+    background-color: rgba(0,0,0,0.35);
+    outline: none;
+    border-radius: 24px;
+    text-align: center;
+    margin: 6px 8px 0 8px;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px var(--white-color);
+}
+
+.close-btn{
+    position: absolute;
+    color: var(--white-color);
+    font-size: 36px;
+    top: 0;
+    right: 0;
+    padding: 0 12px;
+    cursor: pointer;
+}
+.close-btn:hover{
+    opacity: 0.65;
+}
+
+.overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+@keyframes fadeIn{
+    from{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: scale(0);
+                
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shadow {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes sliding {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-65%);
+
+    }
+}

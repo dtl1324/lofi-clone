@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lofi.co - relax and focus</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/general.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+</head>
+
+<body>
+    <div id="root">
+        <!-- background day -->
+        <video type="video/mp4" src="./assets/media/DAY.mp4" class="main-video" id="day-video" preload="auto" autoplay
+            muted loop></video>
+        <!-- background night -->
+        <video type="video/mp4" src="./assets/media/NIGHT.mp4" class="main-video" id="night-video" preload="auto" muted
+            autoplay loop></video>
+        <!-- header -->
+        <div class="header">
+            <div class="logo">
+                <img src="./assets/img/logo.gif" alt="lofi-logo">
+            </div>
+            <div class="navigation">
+                <div><a href="" id="tutorial" class="navlink">How it works</a></div>
+                <div><a href="" id="pricing" class="navlink">Pricing</a></div>
+                <div><a href="" id="contact" class="navlink">Contact</a></div>
+                <div id="dropdow">
+                    <a href="#" class="navlink">About</a>
+                    <div id="menu">
+                        <ul>
+                            <li id="about"><a href="">About Us</a></li>
+                            <li><a target="_blank"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSe9b5QI8zHE6ufCTI735ZSncZ55LE0mWxAhBl2FIiVgOALLYA/viewform">Submistions</a>
+                            </li>
+                            <li><a target="_blank"
+                                    href="https://open.spotify.com/playlist/0iepisLXvVe5RxB3owHjlj?si=8bce4ca31f5740e8&nd=1">Spotify</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div><a target="_blank" href="https://www.shop.lofi.co/" class="navlink">Merch</a></div>
+            </div>
+            <div class="action">
+                <div class="switch-mode">
+                    <label class="switch">
+                        <input id="bg-adjust" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="fullscreen">
+                    <svg fill="none" height="25" viewBox="0 0 20 20" width="25" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="#fff">
+                            <path
+                                d="m13.7143.857143c0-.473387.3837-.857143.8571-.857143 2.9981 0 5.4286 2.43045 5.4286 5.42857 0 .47339-.3838.85714-.8571.85714-.4734 0-.8572-.38375-.8572-.85714 0-2.05134-1.6629-3.71428-3.7143-3.71428-.4734 0-.8571-.38376-.8571-.857147z">
+                            </path>
+                            <path
+                                d="m1.71429 14.5714c0-.4734-.38376-.8571-.857147-.8571s-.857143.3837-.857143.8571c0 2.9981 2.43045 5.4286 5.42857 5.4286.47339 0 .85714-.3838.85714-.8571 0-.4734-.38375-.8572-.85714-.8572-2.05134 0-3.71428-1.6629-3.71428-3.7143z">
+                            </path>
+                            <path
+                                d="m0 5.42857c0-2.99812 2.43045-5.42857 5.42857-5.42857.47339 0 .85714.383756.85714.857143s-.38375.857147-.85714.857147c-2.05134 0-3.71428 1.66294-3.71428 3.71428 0 .47339-.38376.85714-.857147.85714s-.857143-.38375-.857143-.85714z">
+                            </path>
+                            <path
+                                d="m20 14.5714c0-.4734-.3838-.8571-.8571-.8571-.4734 0-.8572.3837-.8572.8571 0 2.0514-1.6629 3.7143-3.7143 3.7143-.4734 0-.8571.3838-.8571.8572 0 .4733.3837.8571.8571.8571 2.9981 0 5.4286-2.4305 5.4286-5.4286z">
+                            </path>
+                        </g>
+                        <path d="m2.5 2.5 5.5 4.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5"></path>
+                        <path d="m17.5 2.5-5.5 4.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5"></path>
+                        <path d="m2.5 17.5 5.5-4.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5"></path>
+                        <path d="m17.5 17.5-5.5-4.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5"></path>
+                    </svg>
+                </div>
+                <div class="btn share-btn">Share</div>
+                <div class="btn signup-btn">Sign Up</div>
+                <div class="btn signin-btn">Login</div>
+            </div>
+        </div>
+        <!-- user-custom  -->
+        <div class="customization">
+            <div id="settings">
+                <i class="custom-icon settings-icon fa-solid fa-sliders"></i>
+                <div class="settings-board hide">
+                    <h3>Mood</h3>
+                    <div class="settings-board-body">
+                        <div class="mood-mode">
+                            <div class="sleepy box-mood">
+                                <i class="mood-icon fa-solid fa-moon"></i>
+                                <span>Sleepy</span>
+                            </div>
+                            <div class="jazzy box-mood">
+                                <i class="mood-icon fa-solid fa-guitar"></i>
+                                <span>Jazzy</span>
+                            </div>
+                            <div class="chill box-mood">
+                                <i class="mood-icon color-active fa-solid fa-mug-hot"></i>
+                                <span>Chill</span>
+                            </div>
+                        </div>
+                        <div class="volume">
+                            <i class="fa-solid fa-volume-low"></i>
+                            <input type="range" id="volume-adjust" step="1" min="0" max="100" value="50">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                        <h3>Background noises</h3>
+                        <div class="optional-items">
+                            <div class="city-traffic background-noise">
+                                <p>City traffic</p>
+                                <input type="range" id="citytraffic-adjust" step="1" min="0" max="100" value="0">
+                                <audio id="city-traffic-music" loop src="./assets/song/citytraffic.mp3"></audio>
+                            </div>
+                            <div class="city-rain background-noise">
+                                <p>City rain</p>
+                                <input type="range" id="cityrain-adjust" step="1" min="0" max="100" value="0">
+                                <audio id="city-rain-music" loop src="./assets/song/raincity.mp3"></audio>
+
+                            </div>
+                            <div class="fireplace background-noise">
+                                <p>Fireplace</p>
+                                <input type="range" id="fireplace-adjust" step="1" min="0" max="100" value="0">
+                                <audio id="fireplace-music" loop src="./assets/song/fireplace.mp3"></audio>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <span class="settings-board-footer">Mix Mode</span>
+                </div>
+            </div>
+            <div id="templates">
+                <i class="custom-icon templates-icon fa-solid fa-gears"></i>
+                <div class="templates-board hide">
+                    <span>Playlists</span>
+                    <div class="templates-board-body">
+                        <div class="templates-item">
+                            <i class="fa-solid fa-cannabis"></i>
+                            <span>Chill</span>
+                        </div>
+                        <div class="templates-item">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span>Focus</span>
+                        </div>
+                        <div class="templates-item">
+                            <i class="fa-solid fa-broom"></i>
+                            <span>Sleep</span>
+                        </div>
+                    </div>
+                    <span>Templates</span>
+                    <p>You haven't saved any template yet, open the mixer to save one.</p>
+                    <div class="premium-playlist">
+                        <p>Get <span>Premium</span> to use our playlists and to save templates</p>
+                        <div class="pricing-btn">Go to Pricing</div>
+                    </div>
+                </div>
+            </div>
+            <div id="sets">
+                <i class="custom-icon sets-icon fa-solid fa-film"></i>
+                <div class="sets-board hide">
+                    <span>Change Set</span>
+                    <div class="sets-img"><img src="./assets/img/cafe_set.png" alt="cafe set"></div>
+                    <div class="sets-img"><img src="./assets/img/chill.png" alt="Chill"></div>
+                    <div class="sets-img"><img src="./assets/img/cottage.png" alt="cottage"></div>
+                    <div class="sets-img"><img src="./assets/img/forest_set.png" alt="forest set"></div>
+                    <div class="sets-img"><img src="./assets/img/lofi_desk.png" alt="lofi desk"></div>
+                    <div class="sets-img"><img src="./assets/img/ocean_set.png" alt="ocean set"></div>
+                    <div class="sets-img"><img src="./assets/img/summer_set.png" alt="summer set"></div>
+                    <div class="sets-img"><img src="./assets/img/van_set.png" alt="van set"></div>
+                </div>
+            </div>
+            <div id="focus-mode">
+                <i class="custom-icon focus-icon fa-solid fa-compact-disc"></i>
+                <div class="focus-mode-board hide">
+                    <span>Focus Mode</span>
+                    <div class="focus-option">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span>Start Session</span>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="focus-option">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Time and Tasks</span>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="focus-option">
+                        <i class="fa-solid fa-photo-film"></i>
+                        <span>Notes</span>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="focus-option">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>History</span>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="premium-focus">
+                        <p>Get <span>Premium</span> to use our suite of productivity tools</p>
+                        <div class="pricing-btn">Go to Pricing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            <div class="music-info">
+                <span>Music by - </span>
+                <span id="name-song">lofi.co 2021 &copy;</span>
+            </div>
+            <div class="music-control">
+                <div class="prevbtn icon-control">
+                    <i class="fa-solid fa-backward"></i>
+                </div>
+                <div class="toggle-btn icon-control">
+                    <i class="fa-solid fa-circle-play play-btn"></i>
+                    <i class="fa-solid fa-circle-pause pause-btn"></i>
+                </div>
+                <div class="nextbtn icon-control">
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+            </div>
+            <audio id="main-audio" src=""></audio>
+        </div>
+    </div>
+    <!-- contact modal form -->
+    <div class="overlay  contact hide">
+        <div class="modal-contact">
+            <div class="close-btn close-contact-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div class="form-header">
+                <span>Contact Us</span>
+            </div>
+            <div class="form-body">
+                <label for="name">Your Name</label>
+                <input type="text" id="name-input" class="text-input">
+
+                <label for="name">Your Email</label>
+                <input type="text" id="email-input" class="text-input">
+
+                <label for="name">Subject</label>
+                <textarea rows="4" id="subject-input" class="text-input"></textarea>
+            </div>
+            <div class="form-footer">Send</div>
+        </div>
+    </div>
+    <!-- share modal -->
+    <div class="overlay hide share">
+        <div class="share-modal" draggable="true">
+            <i class="close-btn close-share-btn fa-solid fa-xmark"></i>
+            <span>Share</span>
+            <p>Copy the link to share your combination of music,
+                scenery and sounds with your friends!</p>
+            <input type="text" readonly value="https://lofi.co?s=Y2hpbGxfdmliZXMmMCYwMDA1MCY=">
+            <div>
+                <i class="fa-brands fa-twitter"></i>
+                <span>Share</span>
+            </div>
+        </div>
+    </div>
+    <!-- register modal form -->
+    <div class="overlay register hide">
+        <div class="register-form">
+            <div class="close-btn close-register-btn">
+                <i class="close-btn fa-solid fa-xmark"></i>
+            </div>
+            <img src="./assets/img/logo.gif" alt="lofi logo">
+            <span>Nice to meet you!</span>
+            <span>Sign up for a free account.</span>
+            <div class="input-form">
+                <input placeholder="Username" type="text">
+                <input placeholder="Email" type="text">
+                <input placeholder="Password" type="text">
+            </div>
+            <span>By signing up, you agree to our</span>
+            <span id="term">Privacy Policy & Terms of Service</span>
+            <div class="regis-btn">Sign Up</div>
+            <span>Already have an account?<a id="login" href="">Log In</a></span>
+        </div>
+    </div>
+    <!-- login modal form -->
+    <div class="overlay login hide">
+        <div class="login-form">
+            <div class="close-btn close-login-btn">
+                <i class="close-btn fa-solid fa-xmark"></i>
+            </div>
+            <img src="./assets/img/logo.gif" alt="lofi logo">
+            <span>Welcome back!</span>
+            <span>Log In to your account.</span>
+            <div class="input-form">
+                <input placeholder="Username" type="text">
+                <input placeholder="Email" type="text">
+            </div>
+            <div class="login-btn">Log In</div>
+            <span>Forgot password?</span>
+            <span>Don't have an account?<a id="signup" href="">Sign Up for free</a></span>
+        </div>
+
+    </div>
+    <!-- -------------pricing modal------------ -->
+    <div class="overlay pricing hide">
+        <div class="pricing-modal">
+            <div class="close-btn close-price-btn">
+                <i class="close-btn fa-solid fa-xmark"></i>
+            </div>
+            <div class="price-board">
+                <span class="price-title">Get more done with premium</span>
+                <div class="price-option">
+                    <span class="pay-for-monthly">Pay monthly</span>
+                    <label class="chose-price-package">
+                        <input type="checkbox" id="input">
+                        <span class="slide"></span>
+                    </label>
+                    <span class="pay-for-yearly">Pay yearly</span>
+                    <div class="price-saleoff">Save 25%</div>
+                </div>
+                <div class="price-package">
+                    <div class="basic-package">
+                        <span class="package-name">Basic</span>
+                        <span class="package-price">$0</span>
+                        <div class="buybtn basic-btn">Use Basic</div>
+                        <ul class="package-info">
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Ad-Free
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Unlimited Music Streaming
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                2 Scenes
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                3 Sounds
+                            </li><br>
+                            <li id="disable">
+                                <i class="fa-solid fa-xmark"></i>
+                                Dowload Wallpapers
+                            </li><br>
+                            <li id="disable">
+                                <i class="fa-solid fa-xmark"></i>
+                                Save your favorite templates
+                            </li><br>
+                            <li id="disable">
+                                <i class="fa-solid fa-xmark"></i>
+                                Customizable Pomodoro Timer
+                            </li><br>
+                            <li id="disable">
+                                <i class="fa-solid fa-xmark"></i>
+                                Notepad
+                            </li><br>
+                        </ul>
+                    </div>
+                    <div class="premium-package">
+                        <span class="package-name">Premium</span>
+                        <span class="package-price premium-price">$2.99<span>/month</span></span>
+                        <div class="buybtn premium-btn">Try Premium*</div>
+                        <ul class="package-info">
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Ad-Free
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Unlimited Music Streaming
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                12 scenes and growing<br>
+                                12+ sounds to mix and match to your liking
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                3 Sounds
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Dowload Wallpapers
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Save your favorite templates
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Pomodoro & Timer
+                            </li><br>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Notepad
+                            </li><br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="more-info">
+                <span>Join the <span class="hightlight">lofi.co</span> family</span>
+                <div class="user-info">
+                    <span class="hightlight">+100.000</span>
+                    <p>Users chilling every month</p>
+                </div>
+                <span>Don't believe in numbers?</span>
+                <p>Read what users write on socials about us.</p>
+                <div class="slide-img">
+                    <img src="./assets/img/social-mosaic.3c5c4e4a.svg" alt="sliding image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------introduction--------------- -->
+    <div class="introduction hide">
+        <div class="close-btn close-introducton-btn">
+            <i class="close-btn fa-solid fa-xmark"></i>
+        </div>
+        <div class="tutorial">
+            <div class="video-tutorial">
+                <img class="media-item img-item active" src="./assets/img/logo.gif" alt="lofi logo">
+                <video class="media-item" src="./assets/media/Video_1_Mixer.mp4" autoplay loop muted></video>
+                <video class="media-item" src="./assets/media/Video_2 _Scenes.mp4" autoplay loop muted></video>
+                <video class="media-item" src="./assets/media/Video_3_Focus _ History.mp4" autoplay loop muted></video>
+                <video class="media-item" src="./assets/media/Video_4_Mixer_Environment.mp4" autoplay loop
+                    muted></video>
+            </div>
+            <div class="next-step">
+                <div class="chosen-btn active"></div>
+                <div class="chosen-btn"></div>
+                <div class="chosen-btn"></div>
+                <div class="chosen-btn"></div>
+                <div class="chosen-btn"></div>
+            </div>
+            <div class="descript">
+                <div class="descript-item active">
+                    <span>Lofi.co: Focus Music You Can Vibe With</span>
+                    <p>Welcome to lofi.co. Let us show you around!</p>
+                </div>
+                <div class="descript-item">
+                    <span>The Perfect Playlist
+                        With One Click</span>
+                    <p>Hit play and get into the zone instantly. No ads. No distracting lyrics.<br>
+                        3 Stations to suit your mood: chill, jazzy or sleepy.</p>
+                </div>
+                <div class="descript-item">
+                    <span>Craft Your Focus Environment</span>
+                    <p>Would you rather get it done in the cafe, or escape to the beach? Lofi.co gives you both with
+                        interactive artworks.<br>
+                        Basic users can access 2 artworks, while premium users have exclusive access to a growing
+                        library of 13+ illustrations.</p>
+                </div>
+                <div class="descript-item">
+                    <span>Cut Out Distractions With Peaceful Sounds</span>
+                    <p>Drown out even the noisiest neighbour with soothing background sounds. Each artwork comes with
+                        adjustable sounds like rain, waves or birds. Some sounds change the scene’s visuals.
+                        Basic users get 3 sound effects. Premium users can mix and match 12+ sounds.</p>
+                </div>
+                <div class="descript-item">
+                    <span>The Focus Zone (Premium)</span>
+                    <p>Deadline coming up? The Focus Zone lets you stay on track by gathering the best focus tools in
+                        one place - away from your distracting smartphone.<br>
+                        - Pomodoro timer: get more done in less time (without burning out) <br>
+                        - Notepad: never let a thought disappear<br>
+                        - Time logger: track your progress<br>
+                        - To-do list: always know what to do next</p>
+                </div>
+            </div>
+            <div class="next-chosen-btn">
+                <div class="next-btn active">Take tour</div>
+                <div class="next-btn">Next</div>
+                <div class="next-btn">Next</div>
+                <div class="next-btn">Next</div>
+                <div class="next-btn">Next</div>
+            </div>
+        </div>
+    </div>
+    <!-- about us modal -->
+    <div class="overlay about-modal hide">
+        <div class="close-btn close-aboutus-btn">
+            <i class="close-btn fa-solid fa-xmark"></i>
+        </div>
+        <div class="about">
+            <span>About us</span>
+            <p>On lofi.co, users can choose from a growing catalog of original artworks to interact with to perform
+                actions like opening the sound mixer or playing background noises (rain, birds chirping, etc.).
+                Sometimes, these actions will also alter the scene’s visuals. In the mixer, it's possible to create the
+                perfect vibe by customizing the background music loop to your preference, choosing between a chill,
+                jazzy or sleepy vibe and then mixing it with the ambient noises. It's possible to save your favorite
+                combination of art, music and sounds as a template. The platforms also offers a suite of productivity
+                tools, which is set in its own customizable illustration and allows users to work/study in sessions. The
+                tools include a customizable pomodoro timer with an integrated task list, a notes app and a history log
+                with stats to check back on all your past sessions.
+            </p>
+            <div class="social-link">
+                <div class="insta">
+                    <i class="fa-brands fa-instagram-square"></i>
+                    <span>Instargram</span>
+                </div>
+                <div class="tiwtter">
+                    <i class="fa-brands fa-twitter"></i>
+                    <span>Twitter</span>
+                </div>
+                <div class="lofi">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Hello@lofi.co</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- term and condition -->
+    <div class="overlay-term hide">
+        <div class="close-btn close-term-btn">
+            <i class="close-btn fa-solid fa-xmark"></i>
+        </div>
+        <div class="term-condition">
+            <div class="term-title">
+                <i class="back-to-about fa-solid fa-angle-left"></i>
+                <span>Terms and Conditions</span>
+            </div>
+            <h3>Welcome to our website. </h3>
+            <p>If you continue to browse and use this website, you are agreeing to comply with and be bound by the
+                following terms and conditions of use, which together with our privacy policy govern Lofi.co
+                relationship with you in relation to this website. If you disagree with any part of these terms and
+                conditions, please do not use our website.
+
+                The term ‘Lofi.co’ or ‘us’ or ‘we’ refers to the owner of the website <span class="color-active">http://www.lofi.co/.</span> The term
+                ‘you’ refers to the user or viewer of our website. Your use of this website constitutes a contract with
+                us.
+            </p>
+            <h3>Terms of Service</h3>
+            <p>We offer a variety of products on our platform customized to meet your personal preference such as
+                choosing a lofi background music loop based on your mood, you may customize it with sounds by
+                interacting with original artworks and enjoy our productivity suite of tools.
+
+                The music played on lofi.co is owned by lofi.co unless stated otherwise. Any use is strictly prohibited.
+
+                The illustrations on lofi.co are originally made for lofi.co. We own exclusive usage & commercial
+                rights. You are not allowed to use any of the art in any way. Premium plan users may be allowed to
+                download selected illustrations to be used as wallpapers.
+            </p>
+            <h3>USER REPRESENTATIONS</h3>
+            <p>By using the Site, you represent and warrant that:
+
+                (1) all registration information you submit will be true, accurate, current, and complete;
+
+                (2) you will maintain the accuracy of such information and promptly update such registration information
+                as necessary;
+
+                (3) you will not access the Site through automated or non-human means, whether through a bot, script, or
+                otherwise;
+
+                (4) you will not use the Site for any illegal or unauthorized purpose;
+
+                (5) your use of the Site will not violate any applicable law or regulation.</p>
+            <h3>USER REGISTRATION</h3>
+            <p>You may be required to register with the Site. You agree to keep your password confidential and will be
+                responsible for all use of your account and password. We reserve the right to remove, reclaim, or change
+                a username you select if we determine, in our sole discretion, that such username is inappropriate,
+                obscene, or otherwise objectionable.
+            </p>
+            <h3>MODIFICATION OF THE SERVICE</h3>
+            <p>We reserve the right, at any time, to modify, suspend, or discontinue the Service or any part thereof
+                with or without notice.
+            </p>
+            <h3>THIRD-PARTY WEBSITES </h3>
+            <p>The Site may contain links to other websites ("Third-Party Websites") as well as articles, photographs,
+                text, graphics, pictures, designs, music, sound, video, information, applications, software, and other
+                content or items belonging to or originating from third parties ("Third-Party Content"). We are not
+                responsible for any Third-Party Websites accessed through the Site or any Third-Party Content posted on,
+                available through, or installed from the Site.
+            </p>
+            <h3>General Limitation of Liability</h3>
+            <p>Lofi.co provides the Site on an “as is” basis and makes no representations whatsoever about any other web
+                site which you may access through the Site or which may link to this Site. When you access a site
+                outside the Site, please understand that it is independent from the Site and that Lofi.co has no control
+                over the content on that web site. In addition, a link to the Site does not mean that Lofi.co endorses
+                or accepts any responsibility for the content, or the use, of such a web site.
+            </p>
+            <h3>Indemnification</h3>
+            <p>You agree to indemnify, defend and hold harmless the Site, its officers, directors, employees, agents,
+                licensors, suppliers and any third-party information providers to the Service from and against all
+                losses, expenses, damages and costs, including legal costs
+            </p>
+            <ul>
+                <li>resulting from any violation of these terms and conditions (including negligent or wrongful conduct)
+                    by you or any other person accessing the Site and its services;
+                </li>
+                <li>howsoever arising as, a result of you downloading files from the Site or that we include links to;
+                    and,
+                </li>
+                <li>howsoever arising as, a result of any action you take as either a direct or indirect result of
+                    information, opinions or other materials on the Site, or generated from the Site and its services.
+                </li>
+            </ul>
+            <h3>Governing law and disputes</h3>
+            <p>This Agreement shall be governed by and constructed exclusively in accordance with the laws of Italy. Any
+                legal action or proceeding between Lofi.co and you concerning this Agreement or the parties’ obligations
+                hereunder shall be brought exclusively in a court of competent jurisdiction sitting in Italy. </p>
+            <h3>Refund Policy</h3>
+            <p>We offer a 7 day money-back guarantee on our premium plans. Please note that the refund is not
+                automatically issued once you cancel your membership, but you will need to send us an e-mail using the
+                ‘Contact Us’ form, with the same details used during registration. The refund will be issued as soon as
+                we receive your message and you will see it in your balance within 7-10 business days.</p>
+            <h3> CONTACT INFORMATION</h3>
+            <p>For any assistance or clarification kindly reach out to us via:
+                Email: hello@lofi.co</p>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
