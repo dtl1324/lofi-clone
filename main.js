@@ -322,6 +322,10 @@ const music = {
             path: "./assets/song/starsky.mp3"
         },
         {
+            name: "China X",
+            path: "./assets/song/china x.mp3"
+        },
+        {
             name: "All Falls Down",
             path: "./assets/song/allfallsdown.mp3"
         },
